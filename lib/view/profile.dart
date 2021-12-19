@@ -11,44 +11,46 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        const ListTile(
-          leading: Icon(Icons.person_outline),
-          title: Text('Meu perfil'),
-        ),
-        ListTile(
-          leading: Icon(Icons.history_edu),
-          title: Text('Histórico'),
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => HistoryPage(),
+    return Center(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const ListTile(
+            leading: Icon(Icons.person_outline),
+            title: Text('Meu perfil'),
+          ),
+          ListTile(
+            leading: const Icon(Icons.history_edu),
+            title: const Text('Histórico'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => HistoryPage(),
+              ),
             ),
           ),
-        ),
-        const ListTile(
-          leading: Icon(Icons.location_on),
-          title: Text('Cardápio'),
-        ),
-        const ListTile(
-          leading: Icon(Icons.account_balance_wallet_rounded),
-          title: Text('Carteira'),
-        ),
-        const ListTile(
-          leading: Icon(Icons.history_edu),
-          title: Text('Contato'),
-        ),
-        const ListTile(
-          leading: Icon(Icons.settings),
-          title: Text('Suporte'),
-        ),
-        const ListTile(
-          leading: Icon(Icons.logout),
-          title: Text('Log out'),
-        ),
-      ],
+          const ListTile(
+            leading: Icon(Icons.location_on),
+            title: Text('Cardápio'),
+          ),
+          const ListTile(
+            leading: Icon(Icons.account_balance_wallet_rounded),
+            title: Text('Carteira'),
+          ),
+          const ListTile(
+            leading: Icon(Icons.history_edu),
+            title: Text('Contato'),
+          ),
+          const ListTile(
+            leading: Icon(Icons.settings),
+            title: Text('Suporte'),
+          ),
+          const ListTile(
+            leading: Icon(Icons.logout),
+            title: Text('Log out'),
+          ),
+        ],
+      ),
     );
   }
 }
