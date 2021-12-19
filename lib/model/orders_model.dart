@@ -1,5 +1,5 @@
 class OrdersModel {
-  final String id;
+  final int id;
   final String clientName;
   final String storeName;
   final String storeLogo;
