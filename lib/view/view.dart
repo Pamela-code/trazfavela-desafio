@@ -1,0 +1,55 @@
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:flutter/material.dart';
+import 'package:trazfavela_desafio/view/home.dart';
+import 'package:trazfavela_desafio/view/menu.dart';
+import 'package:trazfavela_desafio/view/profile.dart';
+import 'package:trazfavela_desafio/view/schedule.dart';
+import 'package:trazfavela_desafio/view/shopping.dart';
+
+class ViewPage extends StatefulWidget {
+  const ViewPage({Key? key}) : super(key: key);
+
+  @override
+  _ViewPageState createState() => _ViewPageState();
+}
+
+class _ViewPageState extends State<ViewPage> {
+  int selectedTab = 2;
+  final List<StatefulWidget> _tabOption = [
+    const HomePage(),
+    const SchedulePage(),
+    const ShoppingPage(),
+    const MenuPage(),
+    const ProfilePage()
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color(0xffff7715),
+        centerTitle: true,
+        title: const Text('TrazFavela - Desafio'),
+      ),
+      bottomNavigationBar: ConvexAppBar(
+        backgroundColor: Colors.white,
+        activeColor: const Color(0xffff7715),
+        color: Colors.black45,
+        height: 75,
+        curveSize: 110,
+        items: const [
+          TabItem(icon: Icons.home, title: 'Home'),
+          TabItem(icon: Icons.calendar_today_rounded, title: 'Agendar'),
+          TabItem(icon: Icons.shopping_basket_outlined, title: 'Compras'),
+          TabItem(icon: Icons.menu_book, title: 'Cardápio'),
+          TabItem(icon: Icons.person, title: 'Perfil'),
+        ],
+        initialActiveIndex: 2,
+        onTap: (int i) => setState(() {
+          selectedTab = i;
+        }),
+      ),
+      body: _tabOption[selectedTab],
+    );
+  }
+}
