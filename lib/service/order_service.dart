@@ -17,6 +17,8 @@ class OrdersService {
               storeLogo: map['imagem']),
         )
         .toList();
+    orders.sort((a, b) => a.id.compareTo(b.id));
+
     return orders;
   }
 }

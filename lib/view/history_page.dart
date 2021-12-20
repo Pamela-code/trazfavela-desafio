@@ -25,6 +25,17 @@ class _HistoryPageState extends State<HistoryPage> {
           if (snapshot.connectionState == ConnectionState.done) {
             return Column(
               children: [
+                Row(
+                  children: [
+                    const Text('Total de pedidos: '),
+                    Text(
+                      snapshot.data!.length.toString(),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
                 Expanded(
                   child: ListView.builder(
                     itemCount: snapshot.data!.length,
