@@ -11,45 +11,90 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const ListTile(
-            leading: Icon(Icons.person_outline),
-            title: Text('Meu perfil'),
-          ),
-          ListTile(
-            leading: const Icon(Icons.history_edu),
-            title: const Text('Histórico'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => HistoryPage(),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const ListTile(
+              leading: Icon(Icons.person_outline),
+              title: Text(
+                'Meu perfil',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black87,
+                ),
               ),
             ),
-          ),
-          const ListTile(
-            leading: Icon(Icons.location_on),
-            title: Text('Cardápio'),
-          ),
-          const ListTile(
-            leading: Icon(Icons.account_balance_wallet_rounded),
-            title: Text('Carteira'),
-          ),
-          const ListTile(
-            leading: Icon(Icons.history_edu),
-            title: Text('Contato'),
-          ),
-          const ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Suporte'),
-          ),
-          const ListTile(
-            leading: Icon(Icons.logout),
-            title: Text('Log out'),
-          ),
-        ],
+            ListTile(
+              leading: const Icon(Icons.history_edu),
+              title: const Text(
+                'Histórico',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black87,
+                ),
+              ),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const HistoryPage(),
+                ),
+              ),
+            ),
+            const ListTile(
+              leading: Icon(Icons.location_on),
+              title: Text(
+                'Cardápio',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black87,
+                ),
+              ),
+            ),
+            const ListTile(
+              leading: Icon(Icons.account_balance_wallet_rounded),
+              title: Text(
+                'Carteira',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black87,
+                ),
+              ),
+            ),
+            const ListTile(
+              leading: Icon(Icons.history_edu),
+              title: Text(
+                'Contato',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black87,
+                ),
+              ),
+            ),
+            const ListTile(
+              leading: Icon(Icons.settings),
+              title: Text(
+                'Suporte',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black87,
+                ),
+              ),
+            ),
+            const ListTile(
+              leading: Icon(Icons.logout),
+              title: Text(
+                'Log out',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black87,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
