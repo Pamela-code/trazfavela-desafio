@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:trazfavela_desafio/model/orders_model.dart';
+import 'package:trazfavela_desafio/service/order_service.dart';
 import 'package:trazfavela_desafio/view/history_page.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -17,6 +19,42 @@ class _ProfilePageState extends State<ProfilePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            FutureBuilder<List<OrdersModel>>(
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  return Column(
+                    children: [
+                      ClipOval(
+                        child: Image.network(
+                          snapshot.data![0].storeLogo,
+                          height: 100,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Text(
+                          snapshot.data![0].storeName,
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Colors.black54,
+                              fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ],
+                  );
+                } else {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Center(
+                        child: CircularProgressIndicator(),
+                      ),
+                    ],
+                  );
+                }
+              },
+              future: OrdersService().getOrders(),
+            ),
             const ListTile(
               leading: Icon(Icons.person_outline),
               title: Text(
