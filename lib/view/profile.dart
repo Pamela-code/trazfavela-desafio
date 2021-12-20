@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:trazfavela_desafio/model/orders_model.dart';
-import 'package:trazfavela_desafio/service/order_service.dart';
-import 'package:trazfavela_desafio/view/history_page.dart';
+import '../model/orders_model.dart';
+import '../service/order_service.dart';
+import 'history_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);

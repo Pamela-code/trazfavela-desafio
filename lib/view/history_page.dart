@@ -1,7 +1,7 @@
-import 'package:trazfavela_desafio/model/orders_model.dart';
+import '../model/orders_model.dart';
 
 import 'package:flutter/material.dart';
-import 'package:trazfavela_desafio/service/order_service.dart';
+import '../service/order_service.dart';
 
 class HistoryPage extends StatefulWidget {
   const HistoryPage({Key? key}) : super(key: key);

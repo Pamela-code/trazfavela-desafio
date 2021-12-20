@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:trazfavela_desafio/model/orders_model.dart';
+import '../model/orders_model.dart';
 
 class OrdersService {
   final url = 'https://dev-trazfavela.herokuapp.com/api/v1/mock/pedidos/';

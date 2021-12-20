@@ -1,10 +1,10 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:trazfavela_desafio/view/home.dart';
-import 'package:trazfavela_desafio/view/menu.dart';
-import 'package:trazfavela_desafio/view/profile.dart';
-import 'package:trazfavela_desafio/view/schedule.dart';
-import 'package:trazfavela_desafio/view/shopping.dart';
+import 'home.dart';
+import 'menu.dart';
+import 'profile.dart';
+import 'schedule.dart';
+import 'shopping.dart';
 
 class ViewPage extends StatefulWidget {
   const ViewPage({Key? key}) : super(key: key);

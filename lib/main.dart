@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trazfavela_desafio/view/view.dart';
+import 'view/view.dart';
 
 void main() {
   runApp(const MyApp());
