@@ -10,9 +10,7 @@ class ViewPage extends StatefulWidget {
 }
 
 class _ViewPageState extends State<ViewPage> {
-  final tabs = TabsModel(
-    selectedTab: 2,
-  );
+  final tabs = TabsModel(selectedTab: 2, key: const Key('tabModel'));
 
   @override
   Widget build(BuildContext context) {

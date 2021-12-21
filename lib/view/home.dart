@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Text(
             'Home',
+            key: Key('homePage'),
             style: TextStyle(
               fontSize: 20,
               color: Colors.black45,

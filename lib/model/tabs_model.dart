@@ -7,6 +7,7 @@ import '../view/shopping.dart';
 
 class TabsModel {
   int selectedTab;
+  Key key;
   final List<StatefulWidget> tabOption = [
     const HomePage(),
     const SchedulePage(),
@@ -15,7 +16,7 @@ class TabsModel {
     const ProfilePage()
   ];
 
-  TabsModel({required this.selectedTab});
+  TabsModel({required this.selectedTab, required this.key});
 
   void changeTab(index) {
     selectedTab = index;
