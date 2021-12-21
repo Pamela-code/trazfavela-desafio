@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:trazfavela_desafio/view/home.dart';
-import 'package:trazfavela_desafio/view/menu.dart';
-import 'package:trazfavela_desafio/view/profile.dart';
-import 'package:trazfavela_desafio/view/schedule.dart';
-import 'package:trazfavela_desafio/view/shopping.dart';
+import '../view/home.dart';
+import '../view/menu.dart';
+import '../view/profile.dart';
+import '../view/schedule.dart';
+import '../view/shopping.dart';
 
 class TabsModel {
   int selectedTab;
