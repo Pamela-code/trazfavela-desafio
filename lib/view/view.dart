@@ -1,10 +1,6 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'home.dart';
-import 'menu.dart';
-import 'profile.dart';
-import 'schedule.dart';
-import 'shopping.dart';
+import 'package:trazfavela_desafio/model/tabs_model.dart';
 
 class ViewPage extends StatefulWidget {
   const ViewPage({Key? key}) : super(key: key);
@@ -14,14 +10,9 @@ class ViewPage extends StatefulWidget {
 }
 
 class _ViewPageState extends State<ViewPage> {
-  int selectedTab = 2;
-  final List<StatefulWidget> _tabOption = [
-    const HomePage(),
-    const SchedulePage(),
-    const ShoppingPage(),
-    const MenuPage(),
-    const ProfilePage()
-  ];
+  final tabs = TabsModel(
+    selectedTab: 2,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -46,10 +37,10 @@ class _ViewPageState extends State<ViewPage> {
         ],
         initialActiveIndex: 2,
         onTap: (int i) => setState(() {
-          selectedTab = i;
+          tabs.changeTab(i);
         }),
       ),
-      body: _tabOption[selectedTab],
+      body: tabs.tabOption[tabs.selectedTab],
     );
   }
 }
